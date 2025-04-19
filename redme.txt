@@ -1,0 +1,51 @@
+Gerenciador de Cardápio de Restaurante
+
+Sistema permite o cadastro de categorias para serem utilizadas no casdastro de pratos. Backend com Node.js + Express e MySQL
+- JavaScript (fetch API).
+
+Comandos:
+
+git clone https://github.com/20ange20/cardapio.git
+npm init -y
+node servidor.js
+
+Exemplo de criar categoria:
+POST /categorias
+Content-Type: application/json
+
+{
+  "nome": "Massas"
+}
+
+
+Criar prato:
+POST /pratos
+Content-Type: application/json
+
+{
+  "nome": "Lasanha Bolonhesa",
+  "preco": 32.5,
+  "categoriaId": "ID_DA_CATEGORIA",
+  "restaurant_id": "rest123"
+}
+
+
+Atualizar preço de um prato:
+PUT /pratos/ID_DO_PRATO/preco
+Content-Type: application/json
+
+{
+  "preco": 29.99
+}
+
+listar dados:
+GET /categorias
+GET /pratos
+
+
+Deletar categoria ou prato:
+DELETE /categorias/ID_DA_CATEGORIA
+DELETE /pratos/ID_DO_PRATO
+
+
+Feito por: Angélica
